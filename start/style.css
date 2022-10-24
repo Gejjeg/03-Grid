@@ -1,0 +1,111 @@
+body {
+    display: grid;
+    justify-content: center;
+}
+#calculator {
+    height: 300px;
+    width: 280px;
+    display: grid;
+    /* border: 1px solid rgb(115, 101, 131); */
+    /* border-collapse: collapse; */
+    /* border-radius: 10px; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* grid-template-rows: repeat(6 1fr); */
+    grid-template-areas: 
+        "display display display display"
+        "addition subtraction multiplication division"
+        "seven eight nine equal"
+        "four five six ."
+        "one two three ."
+        "zero dot ac .";   
+}
+
+
+button {
+    border: 2px solid rgb(50, 131, 131);
+    /* border-collapse: collapse; */
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-left: none;
+    border-bottom: none;
+}
+#display {
+    grid-area: display;
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(88, 88, 88);
+    display: flex;
+    justify-content: right;
+    color: white;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    padding-right: 9px;
+    padding-top: 5px;
+   
+}
+#addition {
+    grid-area: addition;
+}
+#subtraction {
+    grid-area: subtraction;
+}
+#multiplication {
+    grid-area: multiplication;
+}
+#division {
+    grid-area: division;
+    border-right: none;
+}
+#seven {
+    grid-area: seven;
+}
+#eight {
+    grid-area: eight;
+}
+#nine {
+    grid-area: nine;
+}
+#equal {
+    grid-area: equal;
+    grid-column: 4;
+    grid-row: 3 / span 4;
+    border-right: none;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(246, 124, 124);
+}
+#four {
+    grid-area: four;
+}
+#five {
+    grid-area: five;
+}
+#six {
+    grid-area: six;
+}
+#one {
+    grid-area: one;
+}
+#two {
+    grid-area: two;
+}
+#three {
+    grid-area: three;
+}
+#zero {
+    grid-area: zero;
+    border-bottom-left-radius: 10px;
+}
+#dot {
+    grid-area: dot;
+}
+#ac {
+    grid-area: ac;
+}
+.number {
+    background-color: rgb(243, 234, 252);
+}
+.operator {
+    background-color: rgb(214, 214, 223);
+}

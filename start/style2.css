@@ -1,0 +1,87 @@
+#calculator {
+    height: 400px;
+    width: 300px;
+    display: grid;
+    border: 1px solid rgb(115, 101, 131);
+    border-collapse: collapse;
+    border-radius: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(4, 1fr));
+    grid-template-rows: repeat(6 1fr);
+    /* grid-template-areas: 
+        "display display display display"
+        "addition subtraction multiplication division"
+        "seven eight nine equal"
+        "four five six ."
+        "one two three ."
+        "zero dot ac .";    */
+}
+
+
+button {
+    border: none;
+    border-collapse: collapse;
+}
+
+#display {
+    grid-column: 1 / span 6;
+    /* grid-area: display; */
+    /* border-radius: 10px; */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: gray;
+    display: flex;
+    justify-content: right;
+}
+#addition {
+    grid-area: addition;
+}
+#subtraction {
+    grid-area: subtraction;
+}
+#multiplication {
+    grid-area: multiplication;
+}
+#division {
+    grid-area: division;
+}
+#seven {
+    grid-area: seven;
+}
+#eight {
+    grid-area: eight;
+}
+#nine {
+    grid-area: nine;
+}
+#equal {
+    grid-area: equal;
+    grid-column: 4;
+    grid-row: 3 / span 4;
+}
+#four {
+    grid-area: four;
+}
+#five {
+    grid-area: five;
+}
+#six {
+    grid-area: six;
+}
+#one {
+    grid-area: one;
+}
+#two {
+    grid-area: two;
+}
+#three {
+    grid-area: three;
+}
+#zero {
+    grid-area: zero;
+}
+#dot {
+    grid-area: dot;
+}
+#ac {
+    grid-area: ac;
+}
