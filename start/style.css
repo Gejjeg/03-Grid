@@ -12,7 +12,7 @@ body {
     /* grid-template-columns: repeat(4, 1fr); */
     /* grid-template-rows: repeat(6 1fr); */
     grid-template-areas: 
-        "display display display display"
+        "display . . ."
         "addition subtraction multiplication division"
         "seven eight nine equal"
         "four five six ."
@@ -30,7 +30,10 @@ button {
     border-bottom: none;
 }
 #display {
+    /* grid-area:   1 / 1 / span 2 / span 4; */
+    /* height: max-content; */
     grid-area: display;
+    grid-column: 1 /span 4;
     /* border-radius: 10px; */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -42,7 +45,7 @@ button {
     font-size: 30px;
     font-weight: bold;
     padding-right: 9px;
-    padding-top: 5px;
+    /* padding-top: 5px; */
    
 }
 #addition {
@@ -102,6 +105,7 @@ button {
 }
 #ac {
     grid-area: ac;
+    padding: 0;
 }
 .number {
     background-color: rgb(243, 234, 252);
